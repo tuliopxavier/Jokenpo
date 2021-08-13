@@ -48,13 +48,13 @@ function computerRandomChoice(){
     computerChoice = Math.floor((Math.random() * 3) + 1);
 
     if (computerChoice == 1) {
-        computerRock.setAttribute("style", "opacity: 1; transform: scale(1.1);");
+        computerRock.setAttribute("style", "opacity: 1; transform: scale(1.3);");
     }
     else if (computerChoice == 2) {
-        computerPaper.setAttribute("style", "opacity: 1; transform: scale(1.1);");
+        computerPaper.setAttribute("style", "opacity: 1; transform: scale(1.3);");
     }
     else {
-        computerScissors.setAttribute("style", "opacity: 1; transform: scale(1.1);");
+        computerScissors.setAttribute("style", "opacity: 1; transform: scale(1.3);");
     }
 };
 
@@ -79,13 +79,13 @@ function endGame() {
         setTimeout(function (){
             document.querySelector("#victory-modal").showModal();
             document.querySelector("#victory-message").innerHTML = "Congratulations, you wins!";
-            cleanScore()},1000);
+            cleanScore()},1500);
     } else if(computerCounter == 3){
         computerScore.setAttribute("style", "animation: blink 1.5s linear;");
         setTimeout(function (){
             document.querySelector("#victory-modal").showModal();
             document.querySelector("#victory-message").innerHTML = "It wasn't this time, try again?";
-            cleanScore()},1000);
+            cleanScore()},1500);
     }
 
     document.querySelector("#play-again").addEventListener("click", function(){
@@ -115,7 +115,7 @@ userRock.addEventListener("click", function() {
 
     playerScore.setAttribute("style", "animation: none;");
     computerScore.setAttribute("style", "animation: none;");
-    setTimeout(cleanComputerChoice, 1500);
+    setTimeout(cleanComputerChoice, 3000);
     endGame();
 });
 
@@ -138,7 +138,7 @@ userPaper.addEventListener("click", function() {
     
     playerScore.setAttribute("style", "animation: none;");
     computerScore.setAttribute("style", "animation: none;");
-    setTimeout(cleanComputerChoice, 1500);
+    setTimeout(cleanComputerChoice, 3000);
     endGame();
 });
 
@@ -161,6 +161,6 @@ userScissors.addEventListener("click", function() {
 
     playerScore.setAttribute("style", "animation: none;");
     computerScore.setAttribute("style", "animation: none;");
-    setTimeout(cleanComputerChoice, 1500);
+    setTimeout(cleanComputerChoice, 3000);
     endGame();
 });

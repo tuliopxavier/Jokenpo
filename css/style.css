@@ -41,7 +41,7 @@ header h6 {
 
 header h6 span {
   color: #ef4565;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .modal {
@@ -61,6 +61,10 @@ header h6 span {
 
 .modal p {
   margin-bottom: 2rem;
+}
+
+.modal p small {
+  color: #ef4565;
 }
 
 .modal h2 {
@@ -157,19 +161,19 @@ main #are-you-robot:hover + p {
 @keyframes blink {
   0% {
     color: #ef4565;
-    transform: scale(1.1);
+    transform: scale(1.35);
   }
   25% {
     color: #222;
-    transform: scale(1.1);
+    transform: scale(1.35);
   }
   50% {
     color: #ef4565;
-    transform: scale(1.1);
+    transform: scale(1.35);
   }
   100% {
     color: #222;
-    transform: scale(1.1);
+    transform: scale(1.35);
   }
 }
 /*# sourceMappingURL=style.css.map */
