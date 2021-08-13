@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Jokenpo</title>
+</head>
+<body>
+
+    <header>
+        <a id="about">about</a>
+        <dialog id="about-modal" class="modal">
+            <p>Rock paper scissors is a hand game usually played between two people, originated in China and spread with increased contact with East Asia, while developing different variants in signs over time.</p>
+            <p>The game is often used as a fair choosing method between two people, similar to coin flipping or drawing straws. Unlike truly random selection methods, however, rock paper scissors can be played with a degree of skill by recognizing and exploiting non-random behavior in opponents.
+            </p>
+            <p>This project was developed using sass and vanilla js.</p>
+            <footer class="modal-footer">
+                <a id="back-from-about">back</a>
+            </footer>
+        </dialog>
+        <div>
+            <h1>Jokenpô</h1>
+            <h6><span>&#127279;</span> No rights reserved</h6>
+        </div>
+        <a id="rules">rules</a>
+        <dialog id="rules-modal" class="modal">
+            <p>A player who decides to play rock will beat another player who has chosen scissors ("rock crushes scissors"), but will lose to one who has played paper ("paper covers rock"); a play of paper will lose to a play of scissors ("scissors cuts paper"). If both players choose the same shape, the game is tied.</p>
+            <p>It's a simultaneous zero-sum game, it has only two possible outcomes: a draw, or a win for one player and a loss for the other.
+            </p>
+            <p>Who scores three points first wins.</p>
+            <footer class="modal-footer">
+                <a id="back-from-rules">back</a>
+            </footer>
+        </dialog>
+    </header>
+    <main>
+        <article id="player-container" class="container">
+            <div>
+                <h3>Player</h3>
+                <h2 id="player-score">0/3</h2>
+            </div>
+            <div>
+                <img id="user-rock" src="./img/player-rock.svg" alt="rock">
+                <img id="user-paper" src="./img/player-paper.svg" alt="paper">
+                <img id="user-scissors" src="./img/player-scissors.svg" alt="scissors">
+            </div>
+            <p>Choose your shape</p>
+        </article>
+        <div id="versus">
+            <h2>vs</h2>
+        </div>
+        <article id="computer-container" class="container">
+            <div>
+                <h2 id="computer-score">0/3</h2>
+                <h3>Computer</h3>
+            </div>
+            <div id="are-you-robot">
+                <img id="computer-rock" src="./img/computer-rock.svg" alt="rock">
+                <img id="computer-paper" src="./img/computer-paper.svg" alt="paper">
+                <img id="computer-scissors" src="./img/computer-scissors.svg" alt="scissor">
+            </div>
+            <p class="are-you-robot">Are you robot?!</p>
+        </article>
+
+        <dialog id="victory-modal" class="modal">
+            <h2 id="victory-message"></h2>
+            <footer class="modal-footer">
+                <a id="play-again">play again</a>
+            </footer>
+        </dialog>
+    </main>
+    <footer id="main-footer">
+            <h2 id="result">Rock, paper, scissooors!</h2>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>

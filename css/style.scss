@@ -1,0 +1,169 @@
+$primary-color: #222;
+$secondary-color: #ef4565;
+$tertiary-color: #3da9fc;
+$background-color: #fffffe;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: $primary-color;
+    font-family: 'Press Start 2P', cursive;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: $secondary-color;
+    padding: 2rem;
+    text-align: center;
+    h1 {
+        font-size: 3rem;
+    }
+
+    a {
+        text-decoration: underline;
+        font-size: .75rem;
+        color: $primary-color;
+        margin: 1.5rem;
+        transition: color .25s ease;
+
+        &:hover {
+            color: $secondary-color;
+            cursor: pointer;
+        }
+    }
+
+    h6 {
+        color: $primary-color;
+        
+        span {
+            color: $secondary-color;
+            font-size: 1rem;
+        }
+    }
+
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    line-height: 1.2;
+    width: 75%;
+    padding: 3rem;
+    
+    &::backdrop {
+        background: transparentize($primary-color, .1);
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .modal-footer {
+        text-align: center;
+
+        a {
+            text-decoration: underline;
+            color: $secondary-color;
+            transition: color .25s ease;
+
+            &:hover {
+                color: $tertiary-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+main {
+    background: $background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        position: relative;
+        border-radius: .25rem;
+        margin: 3rem 2rem;
+        box-shadow: .5rem .5rem 0 lighten($primary-color, 70); 
+
+        & div:first-child {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem 1rem;
+        }
+
+        & div:nth-child(2) {
+            padding: 1rem 4rem 3rem;
+        }
+    
+        img {
+            max-width: 5rem;
+            opacity: .5;
+            transition: all .25s ease;
+        }
+        
+        p {
+            text-align: center;
+            position: absolute;
+            bottom: .5rem;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    #player-container {
+        background-color: lighten($tertiary-color, 20);
+
+        img:hover {
+            opacity: 1;
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    }
+
+    #computer-container {
+        background-color: lighten($secondary-color, 20);
+    }
+
+    .are-you-robot {
+        display: none;
+    }
+
+    #are-you-robot {
+        cursor: not-allowed;
+        
+        &:hover + p {
+            display: inherit;
+        }
+    }
+}
+
+
+
+#main-footer {
+    background-color: lighten($primary-color, 70);
+    padding: 2rem;
+    margin: 0 3rem;
+    border-radius: .25rem;
+    text-align: center;
+}
+
+@keyframes blink {
+    0% { color: $secondary-color; transform: scale(1.1);}
+    25% { color: $primary-color; transform: scale(1.1);}
+    50% { color: $secondary-color; transform: scale(1.1);}
+    100% { color: $primary-color; transform: scale(1.1);}
+}

@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #222;
+  font-family: 'Press Start 2P', cursive;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #ef4565;
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header a {
+  text-decoration: underline;
+  font-size: .75rem;
+  color: #222;
+  margin: 1.5rem;
+  transition: color .25s ease;
+}
+
+header a:hover {
+  color: #ef4565;
+  cursor: pointer;
+}
+
+header h6 {
+  color: #222;
+}
+
+header h6 span {
+  color: #ef4565;
+  font-size: 1rem;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  line-height: 1.2;
+  width: 75%;
+  padding: 3rem;
+}
+
+.modal::backdrop {
+  background: rgba(34, 34, 34, 0.9);
+}
+
+.modal p {
+  margin-bottom: 2rem;
+}
+
+.modal h2 {
+  margin-bottom: 2rem;
+}
+
+.modal .modal-footer {
+  text-align: center;
+}
+
+.modal .modal-footer a {
+  text-decoration: underline;
+  color: #ef4565;
+  transition: color .25s ease;
+}
+
+.modal .modal-footer a:hover {
+  color: #3da9fc;
+  cursor: pointer;
+}
+
+main {
+  background: #fffffe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container {
+  position: relative;
+  border-radius: .25rem;
+  margin: 3rem 2rem;
+  box-shadow: 0.5rem 0.5rem 0 #d5d5d5;
+}
+
+main .container div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+}
+
+main .container div:nth-child(2) {
+  padding: 1rem 4rem 3rem;
+}
+
+main .container img {
+  max-width: 5rem;
+  opacity: .5;
+  transition: all .25s ease;
+}
+
+main .container p {
+  text-align: center;
+  position: absolute;
+  bottom: .5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+main #player-container {
+  background-color: #a1d6fe;
+}
+
+main #player-container img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+main #computer-container {
+  background-color: #f7a3b3;
+}
+
+main .are-you-robot {
+  display: none;
+}
+
+main #are-you-robot {
+  cursor: not-allowed;
+}
+
+main #are-you-robot:hover + p {
+  display: inherit;
+}
+
+#main-footer {
+  background-color: #d5d5d5;
+  padding: 2rem;
+  margin: 0 3rem;
+  border-radius: .25rem;
+  text-align: center;
+}
+
+@keyframes blink {
+  0% {
+    color: #ef4565;
+    transform: scale(1.1);
+  }
+  25% {
+    color: #222;
+    transform: scale(1.1);
+  }
+  50% {
+    color: #ef4565;
+    transform: scale(1.1);
+  }
+  100% {
+    color: #222;
+    transform: scale(1.1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
